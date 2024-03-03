@@ -1,0 +1,102 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #d5e8d4; /* Light green */
+  padding: 10px;
+  color: #333333; /* Dark gray */
+  width: 100%;
+}
+
+.brand {
+  font-weight: bolder;
+  width: 20%;
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333333; /* Dark gray */
+}
+
+.search-bar {
+  width: 60%;
+}
+
+.search-bar input {
+  width: 55%;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #ffffff; /* White */
+  color: #333333; /* Dark gray */
+}
+
+input::placeholder {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.cart {
+  width: 20%;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333333; /* Dark gray */
+}
+
+.nav-bar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #c8e6c9; /* Light green */
+  color: #333333; /* Dark gray */
+  font-weight: bold;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img img {
+  width: 350px;
+  height: 350px;
+}
+
+.con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.card {
+  background-color: #f1f8e9; /* Light green */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333333; /* Dark gray */
+}
+
+.card p {
+  font-size: 1.2rem;
+  color: #333333; /* Dark gray */
+}
+
+.card a {
+  display: block;
+  background-color: #ffffff; /* White */
+  color: #ffffff; /* White */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.card a:hover {
+  background-color: #d3d3d3; /* Light gray */
+}
