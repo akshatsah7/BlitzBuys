@@ -14,6 +14,12 @@
   font-size: 1.5rem;
   text-decoration: none;
   color: #333333; /* Dark gray */
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.brand:hover {
+  color: #5cb85c; /* Green */
+  transform: scale(1.05); /* Increase size on hover */
 }
 
 .search-bar {
@@ -26,11 +32,19 @@
   font-weight: bold;
   background-color: #ffffff; /* White */
   color: #333333; /* Dark gray */
+  transition: background-color 0.3s ease;
+  border: 1px solid #ced4da; /* Add border */
+  border-radius: 20px; /* Apply border radius to make it rounded */
 }
 
-input::placeholder {
+.search-bar input::placeholder {
   padding: 10px;
   font-weight: bold;
+}
+
+.search-bar input:hover,
+.search-bar input:focus {
+  background-color: #f5f5f5; /* Lighter gray on hover/focus */
 }
 
 .cart {
@@ -40,6 +54,12 @@ input::placeholder {
   font-size: 1.5rem;
   text-decoration: none;
   color: #333333; /* Dark gray */
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.cart:hover {
+  color: #5cb85c; /* Green on hover */
+  transform: scale(1.05); /* Increase size on hover */
 }
 
 .nav-bar-wrapper {
@@ -49,6 +69,11 @@ input::placeholder {
   background-color: #c8e6c9; /* Light green */
   color: #333333; /* Dark gray */
   font-weight: bold;
+  transition: background-color 0.3s ease; /* Added transition */
+}
+
+.nav-bar-wrapper:hover {
+  background-color: #b3e6b3; /* Lighter green on hover */
 }
 
 .img {
@@ -60,6 +85,11 @@ input::placeholder {
 .img img {
   width: 350px;
   height: 350px;
+  transition: transform 0.3s ease; /* Added transform transition */
+}
+
+.img img:hover {
+  transform: scale(1.1); /* Increase size on hover */
 }
 
 .con {
@@ -74,6 +104,14 @@ input::placeholder {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease; /* Added transition */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
 }
 
 .card h2 {
@@ -89,14 +127,90 @@ input::placeholder {
 
 .card a {
   display: block;
-  background-color: #ffffff; /* White */
+  background-color: #5cb85c; /* Green */
   color: #ffffff; /* White */
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   margin-top: 20px;
+  transition: background-color 0.3s ease; /* Added transition */
 }
 
 .card a:hover {
-  background-color: #d3d3d3; /* Light gray */
+  background-color: #4cae4c; /* Darker green on hover */
+}
+
+/* Media queries for responsive design */
+
+/* Small screens (phones) */
+@media only screen and (max-width: 600px) {
+  .nav-bar {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .brand,
+  .search-bar,
+  .cart {
+    width: 100%; /* Make navbar items full width */
+    text-align: center; /* Center text */
+    margin-bottom: 10px; /* Add some space between items */
+  }
+
+  .search-bar input {
+    width: 80%; /* Adjust input width */
+  }
+
+  .img img {
+    width: 250px; /* Decrease image size */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Medium screens (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .nav-bar {
+    flex-direction: row; /* Reset flex direction */
+    justify-content: space-between; /* Adjust alignment */
+    padding: 0 20px; /* Add padding to navbar */
+  }
+
+  .search-bar {
+    width: 30%; /* Adjust search bar width */
+    margin-right: auto; /* Align to the left */
+  }
+
+  .search-bar input {
+    width: 100%; /* Make input full width */
+  }
+
+  .cart {
+    width: 30%; /* Adjust cart width */
+    margin-left: auto; /* Align to the right */
+  }
+
+  .container {
+    width: 90%; /* Adjust container width */
+    margin: 0 auto; /* Center container */
+  }
+}
+
+/* Cart.css */
+
+@media screen and (max-width: 768px) {
+  .card {
+    max-width: 100%;
+  }
+}
+
+/* Large screens (desktops) */
+@media only screen and (min-width: 993px) {
+  /* Add your specific styles for large screens here */
+}
+
+/* Small screens (phones) */
+@media only screen and (max-width: 600px) {
+  .nav-bar {
+    background-color: #d5e8d4; /* Light green */
+    padding: 10px;
+  }
 }
